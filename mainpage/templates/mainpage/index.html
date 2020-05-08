@@ -1,0 +1,116 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    <link rel="stylesheet" type="text/css" href="{% static 'mainpage/main.css'%}">
+    <!-- Bootstrap CSS -->
+    
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  </head>
+  <body>
+    <div class="div "><a href="{% url 'index' %}" class = "navbar-brand"><img src="{% static 'mainpage/img/solar-panels-work_resize_md.png' %}"></a></a></div>
+  <nav class="navbar navbar-expand-sm navbar-dark bg-dark ">
+       
+      <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarMenu">
+        <span class="navbar-toggler-icon"></span>
+       </button>
+      <div class ="collapse navbar-collapse" id="navbarMenu">
+
+        <ul class="navbar-nav custom-center ">
+            <li class="nav-item">
+                <a href="#" class="nav-link">Racks & Trackers</a>
+            </li>
+            <li class="nav-item"><a href="#" class="nav-link">PV Module</a>
+            </li>
+            <li class="nav-item"><a href="#" class="nav-link">PV Systems</a>
+            </li>
+            <li class="nav-item"><a href="#" class="nav-link">Data Analytics</a>
+            </li>
+            <li class="nav-item"><a href="#" class="nav-link">Cybersecurity</a>
+            </li>
+        </ul>
+        <ul class="navbar-nav custom-right">
+          <li class="nav-item">
+            <a href="{% url 'admin:index' %}" class="nav-link">Login</a>
+        </li>
+        
+        <li class="nav-item">
+          <a href="{% url 'registration' %}" class="nav-link">Register</a>
+      </li>
+        </ul>
+      </div>
+  </nav>
+
+  
+
+  <div class="container my-container">
+    <div class="row my-row">
+       <div class="col-3 my-col">
+        <ul>
+          <h3>PV Module</h3>
+          <li>Testing & Certification </li>
+          <li>PV Rating</li>
+
+        </ul>
+        <ul>
+          <h3>PV System Performance</h3>
+          <li>Monitoring & Inspection</li>
+          <li>Performance Analysis</li>
+          <li>Compare System</li>
+          <li>Certifiction</li>
+        </ul>
+        <ul>
+          <h3>Data Analytics</h3>
+          <li>Module lifetime prediction</li>
+          <li>Energy Prediction</li>
+        </ul>
+        <h3>Cybersecurity and Smart Grid Technologies</h3>
+        <br>
+        <h3>Solar PV University</h3>
+
+       </div>
+       
+       
+       <div class="col-6 my-col">
+        <h2>Feature Contents</h2>
+        <br>
+        <br>
+        <iframe width="540" height="315" src="https://www.youtube.com/embed/xKxrkht7CpY" 
+        frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+      </iframe>
+       </div>
+       
+       
+       <div class="col-3 my-col">
+        <h3>News</h3>
+
+       </div>
+    </div>
+    <div class="container ">
+      <div class="row ">
+        <div class="col">
+          <i class="fa fa-bold" aria-hidden="true">solarPV
+            <br>
+            Address, Phone, Email, Website
+          </i>
+          <br>
+          <a href="#">Site Map</a> | <a href="#">Terms and Conditions</a> | <a href="#">Privacy Policy</a> | <a href="#">About Us</a>
+        </div>
+      </div>
+    </div>
+
+
+
+  </div>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  </body>
+</html>

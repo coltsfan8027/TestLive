@@ -1,0 +1,104 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    <link rel="stylesheet" type="text/css" href="{% static 'mainpage/main.css'%}">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  
+  <script> type="text/javascript"
+ 
+ function hasLowerCase(str){
+    return (/[a-z]/.test(str));
+
+ }
+ function hasUpperCase(str){
+    return (/[A-Z]/.test(str));
+
+ }
+ function hasNumber(str){
+    return (/[0-9]/.test(str));
+
+ }
+ 
+ 
+ 
+ function validate()
+  {
+      var uname = document.getElementById("uname");
+      var pass = document.getElementById("password");
+      var namel = uname.length;
+      var passl = pass.length;
+
+
+      if(uname.value.trim() == "" || pass.value.trim()==""){
+          alert("Please fill in User Name and Password");
+          
+      }
+      else{
+          
+      } 
+    }
+  
+
+
+  </script>
+
+
+</head>
+  <body>
+      <div class="div "><a href="{% url 'index' %}" class = "navbar-brand"><img src="{% static 'mainpage/img/solar-panels-work_resize_md.png' %}"></a></a></div>
+  <nav class="navbar navbar-expand-sm navbar-dark bg-dark ">
+       
+      <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarMenu">
+        <span class="navbar-toggler-icon"></span>
+       </button>
+      <div class ="collapse navbar-collapse" id="navbarMenu">
+
+        <ul class="navbar-nav custom-center ">
+            <li class="nav-item">
+                <a href="#" class="nav-link">Racks & Trackers</a>
+            </li>
+            <li class="nav-item"><a href="#" class="nav-link">PV Module</a>
+            </li>
+            <li class="nav-item"><a href="#" class="nav-link">PV Systems</a>
+            </li>
+            <li class="nav-item"><a href="#" class="nav-link">Data Analytics</a>
+            </li>
+            <li class="nav-item"><a href="#" class="nav-link">Cybersecurity</a>
+            </li>
+        </ul>
+        <ul class="navbar-nav custom-right">
+          <li class="nav-item">
+            <a href="{% url 'admin:index' %}" class="nav-link">Login</a>
+        </li>
+        <li class="nav-item">
+          <a href=""{% url 'registration' %}"" class="nav-link">Register</a>
+      </li>
+        </ul>
+      </div>
+  </nav>
+  <div class="container my-container">
+      <h2>Please Enter the Following Information:</h2>
+      <form method="POST" name="UserForm">{%csrf_token%}
+      {{form.as_p}}
+        
+        <button onclick="validate()" type="submit">Submit</button>
+        
+    </form>
+
+
+  </div>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  </body>
+</html>
